@@ -1,0 +1,37 @@
+body {
+  background-image: linear-gradient(
+    to top,
+    #dad4ec 0%,
+    #dad4ec 1%,
+    #f8f6f6 100%
+  );
+  color: rgb(31, 2, 58);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+  display: block;
+  margin: 60px auto;
+  padding: 0px;
+  max-width: 800px;
+  background-color: #ffffff;
+  color: rgb(31, 2, 58);
+  border-radius: 30px;
+}
+
+.margin {
+  padding: 0px 15px;
+}
+
+#logo-image {
+  color: rgb(126, 82, 248);
+  font-size: 30px;
+  margin: 5px 0 15px 0;
+}
+
+#app-name {
+  font-family: "Akaya Telivigala", cursive;
+  color: #42077a;
+  font-weight: 900;
+  font-size: 25px;
+}
