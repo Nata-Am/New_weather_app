@@ -28,48 +28,57 @@
           <i class="fas fa-wind" id="logo-image"></i
           ><span id="app-name">We-cool</span>
         </section>
-        <div class="row">
-          <div class="col-6">
-            <input
-              type="text"
-              placeholder="Enter a city"
-              autofocus="on"
-              autocomplete="off"
-            />
-            <input type="submit" value="Search" />
-            <small>Current location & temperature</small>
+        <section class="searchEngine">
+          <div class="row">
+            <div class="col-6">
+              <form id="search-form">
+                <input
+                  type="text"
+                  placeholder="Enter a city"
+                  autofocus="on"
+                  autocomplete="off"
+                  class="form-control"
+                />
+                <input type="submit" value="Search" class="search-btn" />
+              </form>
+              <small class="currentInfo"
+                ><em>Current location & temperature</em></small
+              >
+            </div>
+            <div class="col-6">
+              <ul class="dateTime">
+                <li class="date">Friday, Apr 13 2021</li>
+                <li class="time">17:56</li>
+              </ul>
+            </div>
           </div>
-          <div class="col-6">
-            <ul>
-              <li>Friday, Apr 13 2021</li>
-              <li>17:56</li>
-            </ul>
+        </section>
+        <br />
+        <section class="weatherData">
+          <div class="row">
+            <div class="col-6">
+              <i class="fas fa-cloud-moon" id="weather-icon"></i>
+            </div>
+            <div class="col-6">
+              <h1 id="city-name">Mexico</h1>
+              <p id="temperature">20<span class="metric">°C|F</span></p>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <i class="fas fa-cloud-moon"></i>
+          <div class="row">
+            <div class="col-6">
+              <ul class="descriptiveInfo">
+                <li><strong>Humidity:</strong> 25%</li>
+                <li><strong>Wind:</strong> 3.09 km/h</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="descriptionCountryInfo">
+                <li class="description">Clowdy</li>
+                <li class="country">Mexico</li>
+              </ul>
+            </div>
           </div>
-          <div class="col-6">
-            <h1 id="city-name">Mexico city</h1>
-            <h2>20</h2>
-            <span>°C|F</span>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <ul>
-              <li>Humidity: 25%</li>
-              <li>Wind: 3.09 km/h</li>
-            </ul>
-          </div>
-          <div class="col-6">
-            <ul>
-              <li>Clowdy</li>
-              <li>Mexico</li>
-            </ul>
-          </div>
-        </div>
+        </section>
         <hr />
         <section>
           <div class="row">
