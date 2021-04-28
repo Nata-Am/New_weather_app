@@ -30,8 +30,8 @@
         </section>
         <section class="searchEngine">
           <div class="row">
-            <div class="col-6">
-              <form id="search-form">
+            <div class="col-7">
+              <form id="search-form" class="input-group mb-3">
                 <input
                   type="text"
                   placeholder="Enter a city"
@@ -45,7 +45,7 @@
                 ><em>Current location & temperature</em></small
               >
             </div>
-            <div class="col-6">
+            <div class="col-5">
               <ul class="dateTime">
                 <li class="date">Friday, Apr 13 2021</li>
                 <li class="time">17:56</li>
@@ -53,28 +53,29 @@
             </div>
           </div>
         </section>
-        <br />
         <section class="weatherData">
           <div class="row">
-            <div class="col-6">
+            <div class="col-3">
               <i class="fas fa-cloud-moon" id="weather-icon"></i>
             </div>
-            <div class="col-6">
+            <div class="col-4" id="mainWeatherData">
               <h1 id="city-name">Mexico</h1>
               <p id="temperature">20<span class="metric">°C|F</span></p>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-6">
-              <ul class="descriptiveInfo">
-                <li><strong>Humidity:</strong> 25%</li>
-                <li><strong>Wind:</strong> 3.09 km/h</li>
-              </ul>
-            </div>
-            <div class="col-6">
-              <ul class="descriptionCountryInfo">
-                <li class="description">Clowdy</li>
-                <li class="country">Mexico</li>
+            <div class="col-5" id="descriptiveInfo">
+              <ul class="list-group-horizontal list-group-flush">
+                <li class="list-group-item">
+                  <strong>Description:</strong><span> Clowdy</span>
+                </li>
+                <li class="list-group-item">
+                  <strong>Humidity:</strong><span> 25%</span>
+                </li>
+                <li class="list-group-item">
+                  <strong>Wind:</strong><span> 3.09 km/h</span>
+                </li>
+                <li class="list-group-item">
+                  <strong>Country:</strong><span> Mexico</span>
+                </li>
               </ul>
             </div>
           </div>

@@ -14,7 +14,7 @@ body {
   display: block;
   margin: 60px auto;
   padding: 0px;
-  max-width: 760px;
+  max-width: 650px;
   background-color: #ffffff;
   color: rgb(31, 2, 58);
   border-radius: 30px;
@@ -39,7 +39,6 @@ body {
 
 .form-control {
   display: inline;
-  width: auto;
   color: rgb(31, 2, 58);
 }
 
@@ -52,6 +51,8 @@ body {
   border-radius: 8px;
   box-shadow: 4px 4px 8px rgb(212, 212, 212);
   transition: all 200ms ease-in-out;
+  position: relative;
+  right: -10px;
 }
 .search-btn:hover {
   color: white;
@@ -62,6 +63,8 @@ body {
 .currentInfo {
   color: gray;
   text-decoration: none;
+  position: relative;
+  top: -15px;
 }
 
 .currentInfo:hover {
@@ -72,45 +75,38 @@ body {
 .dateTime {
   list-style: none;
   text-align: right;
+  position: relative;
+  top: -43px;
 }
 
 #weather-icon {
-  font-size: 100px;
+  font-size: 90px;
   position: relative;
-  left: 110px;
+  left: 50px;
+  top: 50px;
   margin-bottom: 30px;
   margin-top: 10px;
 }
 
-.descriptiveInfo li {
-  list-style: none;
-  text-align: left;
-  display: inline;
+#mainWeatherData {
+  position: relative;
+  left: 40px;
+  top: 15px;
 }
 
 #city-name {
-  text-align: center;
   font-weight: lighter;
   font-size: 30px;
-  margin: -25px 0 0 0;
+  text-align: center;
 }
 
 #temperature {
-  text-align: center;
   font-size: 100px;
-  margin: -30px 0 0 0;
+  margin: -38px 0 0 0;
+  text-align: center;
 }
 .metric {
   font-size: 20px;
   position: relative;
   top: -50px;
-}
-
-.descriptionCountryInfo li {
-  list-style: none;
-  display: inline;
-}
-
-.descriptionCountryInfo {
-  text-align: center;
 }
