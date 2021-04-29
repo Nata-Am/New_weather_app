@@ -52,63 +52,93 @@
               </ul>
             </div>
           </div>
+          <br />
         </section>
         <section class="weatherData">
           <div class="row">
             <div class="col-3">
               <i class="fas fa-cloud-moon" id="weather-icon"></i>
             </div>
-            <div class="col-4" id="mainWeatherData">
+            <div class="col-5" id="mainWeatherData">
               <h1 id="city-name">Mexico</h1>
               <p id="temperature">20<span class="metric">°C|F</span></p>
             </div>
-            <div class="col-5" id="descriptiveInfo">
+            <div class="col-4" id="descriptiveInfo">
               <ul class="list-group-horizontal list-group-flush">
                 <li class="list-group-item">
-                  <strong>Description:</strong><span> Clowdy</span>
+                  <span>Description:</span
+                  ><strong class="description"> Clowdy</strong>
                 </li>
                 <li class="list-group-item">
-                  <strong>Humidity:</strong><span> 25%</span>
+                  <span>Humidity:</span><strong class="humidity"> 25%</strong>
                 </li>
                 <li class="list-group-item">
-                  <strong>Wind:</strong><span> 3.09 km/h</span>
+                  <span>Wind:</span><strong class="wind"> 3.09 km/h</strong>
                 </li>
                 <li class="list-group-item">
-                  <strong>Country:</strong><span> Mexico</span>
+                  <span>Country:</span><strong class="country"> Mexico</strong>
                 </li>
               </ul>
             </div>
           </div>
+          <br />
         </section>
-        <hr />
-        <section>
-          <div class="row">
-            <div class="col-1 following-day">Fri</div>
-            <div class="col-1 following-day">Sat</div>
-            <div class="col-1 following-day">Sun</div>
-            <div class="col-1 following-day">Mon</div>
-            <div class="col-1 following-day">Tue</div>
+        <section class="forecast">
+          <div class="row fcst-days">
+            <div class="col following-day">Fri</div>
+            <div class="col following-day">Sat</div>
+            <div class="col following-day">Sun</div>
+            <div class="col following-day">Mon</div>
+            <div class="col following-day">Tue</div>
           </div>
-          <div class="row">
-            <div class="col-1 logo">🌞</div>
-            <div class="col-1 logo">🌞</div>
-            <div class="col-1 logo">🌞</div>
-            <div class="col-1 logo">🌞</div>
-            <div class="col-1 logo">🌞</div>
+          <div class="row fcst-logo">
+            <div class="col logo">🌧</div>
+            <div class="col logo">🌧</div>
+            <div class="col logo">🌧</div>
+            <div class="col logo">🌧</div>
+            <div class="col logo">🌧</div>
           </div>
-          <div class="row">
-            <div class="col-1 temperature">18 10</div>
-            <div class="col-1 temperature">18 10</div>
-            <div class="col-1 temperature">18 10</div>
-            <div class="col-1 temperature">18 10</div>
-            <div class="col-1 temperature">18 10</div>
+          <div class="row fcst-temperature">
+            <div class="col">
+              <span class="max-temperature">18°</span>
+              <span class="min-temperature">10°</span>
+            </div>
+            <div class="col">
+              <span class="max-temperature">18°</span>
+              <span class="min-temperature">10°</span>
+            </div>
+            <div class="col">
+              <span class="max-temperature">18°</span>
+              <span class="min-temperature">10°</span>
+            </div>
+            <div class="col">
+              <span class="max-temperature">18°</span>
+              <span class="min-temperature">10°</span>
+            </div>
+            <div class="col">
+              <span class="max-temperature">18°</span>
+              <span class="min-temperature">10°</span>
+            </div>
           </div>
         </section>
         <br />
-
-        <p>
-          This project was coded by Natalia Amador and is open-sourced on GitHub
-          and hosted on Netlify
+        <br />
+        <br />
+        <p class="coder">
+          This project was coded by Natalia Amador and is
+          <a
+            href="https://github.com/Nata-Am/New_weather_app.git"
+            target="_blank"
+            class="linkGit"
+            >open-sourced on GitHub
+          </a>
+          and
+          <a
+            href="https://fervent-agnesi-854393.netlify.app"
+            target="_blank"
+            class="linkNetlify"
+            >hosted on Netlify</a
+          >
         </p>
       </div>
     </div>
