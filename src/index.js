@@ -39,7 +39,7 @@ hour.innerHTML = formatedHour(today)
 function showCurrentCityTemperature(response) {
     let currentTemperature = Math.round(response.data.main.temp);
     let temperature = document.querySelector("#temperature");
-    temperature.innerHTML = ` ${currentTemperature}°`;
+    temperature.innerHTML = ` ${currentTemperature}`;
 
     let weatherDescription = document.querySelector("#description")
     weatherDescription.innerHTML = response.data.weather[0].description;
@@ -84,7 +84,7 @@ city.addEventListener("submit", searchCity)
 function showCurrentTemperature(response) {
     let currentTemperature = Math.round(response.data.main.temp);
     let temperature = document.querySelector("#temperature");
-    temperature.innerHTML = ` ${currentTemperature}°`;
+    temperature.innerHTML = ` ${currentTemperature}`;
 
     let currentCity = document.querySelector("#current-city");
     currentCity.innerHTML = `${response.data.name} 📌`;

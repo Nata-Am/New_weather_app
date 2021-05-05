@@ -26,8 +26,18 @@
     <div class="container shadow-lg p-3 mb-5">
       <div class="margin">
         <section class="logo">
-          <i class="fas fa-wind" id="logo-image"></i
-          ><span id="app-name">We-cool</span>
+          <div class="row">
+            <div class="col-7">
+              <i class="fas fa-wind" id="logo-image"></i
+              ><span id="app-name">We-cool</span>
+            </div>
+            <div class="col-5">
+              <ul class="dateTime">
+                <li class="date" id="current-date">Friday, Apr 13 2021</li>
+                <li class="time" id="current-time">17:56</li>
+              </ul>
+            </div>
+          </div>
         </section>
         <section class="searchEngine">
           <div class="row">
@@ -47,18 +57,11 @@
                 ><em>Current location & temperature</em></small
               >
             </div>
-            <div class="col-5">
-              <ul class="dateTime">
-                <li class="date" id="current-date">Friday, Apr 13 2021</li>
-                <li class="time" id="current-time">17:56</li>
-              </ul>
-            </div>
           </div>
-          <br />
         </section>
         <section class="weatherData">
           <div class="row">
-            <div class="col-3">
+            <div class="col-1" id="weather-icon-wrap">
               <img
                 src="http://openweathermap.org/img/wn/10d@2x.png"
                 alt=""
@@ -67,7 +70,11 @@
             </div>
             <div class="col-5" id="mainWeatherData">
               <h1 id="current-city">Mexico</h1>
-              <p id="temperature">20<span class="metric">°C|F</span></p>
+              <p id="temperature">20</p>
+            </div>
+            <div class="col-2" id="celsius-fahrenheit">
+              <a href="#" id="celsius-link" class="active"> °C|</a>
+              <a href="#" id="fahrenheit-link"> F</a>
             </div>
             <div class="col-4" id="descriptiveInfo">
               <ul class="list-group-horizontal list-group-flush">

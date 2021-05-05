@@ -39,19 +39,17 @@ body {
 .dateTime {
   list-style: none;
   text-align: right;
-  position: relative;
-  top: -43px;
   color: gray;
   font-size: 12px;
 }
 
-.form-control {
-  display: inline;
+#city-name {
+  font-weight: lighter;
+  font-size: 20px;
 }
 
 .search-btn {
   color: #42077a;
-  font-size: 1rem;
   background: rgb(208, 208, 209);
   padding: 8px 15px;
   border: 1px solid rgb(212, 212, 212);
@@ -74,39 +72,33 @@ body {
   top: -15px;
   font-size: 12px;
 }
-
 .currentInfo:hover {
   font-weight: bold;
   cursor: pointer;
 }
 
 #weather-icon {
-  font-size: 80px;
+  width: 130px;
   position: relative;
-  left: 50px;
-  top: 35px;
+  top: 27px;
+  left: 20px;
 }
 
 #mainWeatherData {
   position: relative;
-  left: 40px;
+  left: 60px;
 }
 
-#city-name {
-  font-weight: lighter;
-  font-size: 30px;
+#current-city {
   text-align: center;
+  font-size: 30px;
+  font-weight: lighter;
 }
 
 #temperature {
+  text-align: center;
   font-size: 100px;
   margin: -38px 0 0 0;
-  text-align: center;
-}
-.metric {
-  font-size: 20px;
-  position: relative;
-  top: -50px;
 }
 
 #descriptiveInfo {
