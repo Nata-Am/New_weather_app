@@ -34,7 +34,6 @@ let hour = document.querySelector("#current-time")
 hour.innerHTML = formatedHour(today)
 
 function showCurrentCityTemperature(response) {
-    console.log(response.data);
     let currentTemperature = Math.round(response.data.main.temp);
     let temperature = document.querySelector("#temperature");
     temperature.innerHTML = ` ${currentTemperature}°`;
@@ -72,3 +71,43 @@ function searchCity(event) {
 
 let city = document.querySelector("#search-form")
 city.addEventListener("submit", searchCity)
+
+
+function showCurrentTemperature(response) {
+    let currentTemperature = Math.round(response.data.main.temp);
+    let temperature = document.querySelector("#temperature");
+    temperature.innerHTML = ` ${currentTemperature}°`;
+
+    let currentCity = document.querySelector("#current-city");
+    currentCity.innerHTML = `${response.data.name} 📌`;
+
+    let weatherDescription = document.querySelector("#description")
+    weatherDescription.innerHTML = response.data.weather[0].description;
+
+    let currentHumidity = response.data.main.humidity;
+    let weatherHumidity = document.querySelector("#humidity");
+    weatherHumidity.innerHTML = ` ${currentHumidity}%`;
+
+    let currentWind = response.data.wind.speed;
+    let weatherWind = document.querySelector("#wind");
+    weatherWind.innerHTML = ` ${currentWind} km/h`;
+}
+
+
+function fetchCurrentLocation(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    
+    let apiKey = "8c780c003118c891cdcc809594dbc9d4"
+    let units = "metric"
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`
+
+    axios.get(apiUrl).then(showCurrentTemperature)
+}
+
+function linkCurrentLocation() {
+    navigator.geolocation.getCurrentPosition(fetchCurrentLocation)
+}
+
+let currentLocation = document.querySelector("#currentInfo");
+currentLocation.addEventListener ("click",linkCurrentLocation)
