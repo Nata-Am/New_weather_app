@@ -33,6 +33,9 @@ function formatedHour(timming) {
 let hour = document.querySelector("#current-time")
 hour.innerHTML = formatedHour(today)
 
+
+
+
 function showCurrentCityTemperature(response) {
     let currentTemperature = Math.round(response.data.main.temp);
     let temperature = document.querySelector("#temperature");
@@ -48,8 +51,11 @@ function showCurrentCityTemperature(response) {
     let currentWind = response.data.wind.speed;
     let weatherWind = document.querySelector("#wind");
     weatherWind.innerHTML = ` ${currentWind} km/h`;
-}
 
+    let weatherIcon = document.querySelector("#weather-icon");
+    weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+    weatherIcon.setAttribute("alt",response.data.weather[0].description)
+}
 
 function searchCity(event) {
     event.preventDefault();
@@ -73,6 +79,8 @@ let city = document.querySelector("#search-form")
 city.addEventListener("submit", searchCity)
 
 
+
+
 function showCurrentTemperature(response) {
     let currentTemperature = Math.round(response.data.main.temp);
     let temperature = document.querySelector("#temperature");
@@ -93,7 +101,6 @@ function showCurrentTemperature(response) {
     weatherWind.innerHTML = ` ${currentWind} km/h`;
 }
 
-
 function fetchCurrentLocation(position) {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
@@ -110,4 +117,9 @@ function linkCurrentLocation() {
 }
 
 let currentLocation = document.querySelector("#currentInfo");
-currentLocation.addEventListener ("click",linkCurrentLocation)
+currentLocation.addEventListener("click", linkCurrentLocation)
+
+
+
+
+
