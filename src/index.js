@@ -33,6 +33,24 @@ function formatedHour(timming) {
 let hour = document.querySelector("#current-time")
 hour.innerHTML = formatedHour(today)
 
+function showCurrentCityTemperature(response) {
+    console.log(response.data);
+    let currentTemperature = Math.round(response.data.main.temp);
+    let temperature = document.querySelector("#temperature");
+    temperature.innerHTML = ` ${currentTemperature}°`;
+
+    let weatherDescription = document.querySelector("#description")
+    weatherDescription.innerHTML = response.data.weather[0].description;
+
+    let currentHumidity = response.data.main.humidity;
+    let weatherHumidity = document.querySelector("#humidity");
+    weatherHumidity.innerHTML = ` ${currentHumidity}%`;
+
+    let currentWind = response.data.wind.speed;
+    let weatherWind = document.querySelector("#wind");
+    weatherWind.innerHTML = ` ${currentWind} km/h`;
+}
+
 
 function searchCity(event) {
     event.preventDefault();
@@ -49,7 +67,7 @@ function searchCity(event) {
     let units = "metric"
     let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=${units}`
 
-    //axios.get(apiUrl).then(showCurrentCityTemperature)
+    axios.get(apiUrl).then(showCurrentCityTemperature)
 }
 
 let city = document.querySelector("#search-form")
