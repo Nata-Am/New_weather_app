@@ -34,4 +34,23 @@ let hour = document.querySelector("#current-time")
 hour.innerHTML = formatedHour(today)
 
 
-let apiKey = "8c780c003118c891cdcc809594dbc9d4"
+function searchCity(event) {
+    event.preventDefault();
+    let searchInput = document.querySelector("#city-name");
+    let currentCity = document.querySelector("#current-city");
+    if (searchInput.value) {
+        currentCity.innerHTML = `${searchInput.value}`
+    } else {
+        currentCity.innerHTML = null;
+        alert ("Please, enter a city")
+    }
+            
+    let apiKey = "8c780c003118c891cdcc809594dbc9d4"
+    let units = "metric"
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=${units}`
+
+    //axios.get(apiUrl).then(showCurrentCityTemperature)
+}
+
+let city = document.querySelector("#search-form")
+city.addEventListener("submit", searchCity)
