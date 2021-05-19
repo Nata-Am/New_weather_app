@@ -37,7 +37,8 @@ hour.innerHTML = formatedHour(today)
 
 
 function showCurrentCityTemperature(response) {
-    let currentTemperature = Math.round(response.data.main.temp);
+    celsiusTemperture = response.data.main.temp;
+    let currentTemperature = Math.round(celsiusTemperture);
     let temperature = document.querySelector("#temperature");
     temperature.innerHTML = ` ${currentTemperature}`;
 
@@ -54,7 +55,7 @@ function showCurrentCityTemperature(response) {
 
     let weatherIcon = document.querySelector("#weather-icon");
     weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
-    weatherIcon.setAttribute("alt",response.data.weather[0].description)
+    weatherIcon.setAttribute("alt", response.data.weather[0].description)
 }
 
 function searchCity(event) {
@@ -118,6 +119,20 @@ function linkCurrentLocation() {
 
 let currentLocation = document.querySelector("#currentInfo");
 currentLocation.addEventListener("click", linkCurrentLocation)
+
+
+
+
+function displayFahrenheitTemperature(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature")
+    let fahrenheitTemperature = (celsiusTemperture * 9) / 5 + 32
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let celsiusTemperture = null
+let fahrenheitLink = document.querySelector("#fahrenheit-link")
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature)
 
 
 
