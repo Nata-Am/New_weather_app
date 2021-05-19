@@ -42,6 +42,9 @@ function showCurrentCityTemperature(response) {
     let temperature = document.querySelector("#temperature");
     temperature.innerHTML = ` ${currentTemperature}`;
 
+    let currentCity = document.querySelector("#current-city");
+    currentCity.innerHTML = `${response.data.name}`;
+
     let weatherDescription = document.querySelector("#description")
     weatherDescription.innerHTML = response.data.weather[0].description;
 
@@ -58,32 +61,32 @@ function showCurrentCityTemperature(response) {
     weatherIcon.setAttribute("alt", response.data.weather[0].description)
 }
 
-function searchCity(event) {
-    event.preventDefault();
-    let searchInput = document.querySelector("#city-name");
-    let currentCity = document.querySelector("#current-city");
-    if (searchInput.value) {
-        currentCity.innerHTML = `${searchInput.value}`
-    } else {
-        currentCity.innerHTML = null;
-        alert ("Please, enter a city")
-    }
-            
+function search(city) {
     let apiKey = "8c780c003118c891cdcc809594dbc9d4"
     let units = "metric"
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${searchInput.value}&appid=${apiKey}&units=${units}`
+    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`
 
     axios.get(apiUrl).then(showCurrentCityTemperature)
 }
 
-let city = document.querySelector("#search-form")
-city.addEventListener("submit", searchCity)
+
+function handleSubmit(event) {
+    event.preventDefault();
+    let searchInput = document.querySelector("#city-name");
+    search(searchInput.value);
+}
+
+search("Montreal")
+
+let form = document.querySelector("#search-form")
+form.addEventListener("submit", handleSubmit)
 
 
 
 
 function showCurrentTemperature(response) {
-    let currentTemperature = Math.round(response.data.main.temp);
+    celsiusTemperture = response.data.main.temp;
+    let currentTemperature = Math.round(celsiusTemperture);
     let temperature = document.querySelector("#temperature");
     temperature.innerHTML = ` ${currentTemperature}`;
 
@@ -141,9 +144,3 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link")
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature)
 let celsiusLink = document.querySelector("#celsius-link")
 celsiusLink.addEventListener("click", displayCelsiusTemperature)
-
-
-
-
-
-
