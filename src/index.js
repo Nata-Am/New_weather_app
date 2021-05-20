@@ -110,6 +110,10 @@ function showCurrentTemperature(response) {
     let currentWind = response.data.wind.speed;
     let weatherWind = document.querySelector("#wind");
     weatherWind.innerHTML = ` ${currentWind} km/h`;
+
+    let weatherIcon = document.querySelector("#weather-icon");
+    weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+    weatherIcon.setAttribute("alt", response.data.weather[0].description)
 }
 
 function fetchCurrentLocation(position) {
