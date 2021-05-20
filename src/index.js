@@ -73,7 +73,14 @@ function search(city) {
 function handleSubmit(event) {
     event.preventDefault();
     let searchInput = document.querySelector("#city-name");
-    search(searchInput.value);
+    let currentCity = document.querySelector("#current-city");
+    
+    if(searchInput.value){
+      currentCity.innerHTML = search(searchInput.value)
+    } else {
+      currentCity.innerHTML = null;
+      alert ("Please, enter a city")
+    }
 }
 
 search("Montreal")
