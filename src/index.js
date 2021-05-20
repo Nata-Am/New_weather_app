@@ -76,10 +76,10 @@ function handleSubmit(event) {
     let currentCity = document.querySelector("#current-city");
     
     if(searchInput.value){
-      currentCity.innerHTML = search(searchInput.value)
+        currentCity.innerHTML = search(searchInput.value);
     } else {
       currentCity.innerHTML = null;
-      alert ("Please, enter a city")
+      alert("Please, enter a city");
     }
 }
 
@@ -98,7 +98,7 @@ function showCurrentTemperature(response) {
     temperature.innerHTML = ` ${currentTemperature}`;
 
     let currentCity = document.querySelector("#current-city");
-    currentCity.innerHTML = `${response.data.name} 📌`;
+    currentCity.innerHTML = `${response.data.name} 📍`;
 
     let weatherDescription = document.querySelector("#description")
     weatherDescription.innerHTML = response.data.weather[0].description;
@@ -135,8 +135,8 @@ currentLocation.addEventListener("click", linkCurrentLocation)
 
 function displayFahrenheitTemperature(event) {
     event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature")
-    let fahrenheitTemperature = (celsiusTemperture * 9) / 5 + 32
+    let temperatureElement = document.querySelector("#temperature");
+    let fahrenheitTemperature = (celsiusTemperture * 9) / 5 + 32;
     temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 

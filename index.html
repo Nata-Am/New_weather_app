@@ -61,7 +61,8 @@
         </section>
         <section class="weatherData">
           <div class="row">
-            <div class="col-2" id="weather-icon-wrap">
+            <div class="col-1" id="weather-icon-wrap">
+              <div class="square"></div>
               <img
                 src="http://openweathermap.org/img/wn/10d@2x.png"
                 alt=""
@@ -71,10 +72,12 @@
             <div class="col-6" id="mainWeatherData">
               <h1 id="current-city">Mexico</h1>
               <p id="temperature">20</p>
-              <a href="#" id="celsius-link" class="active"> °C|</a>
-              <a href="#" id="fahrenheit-link"> °F</a>
+              <span class="units">
+                <a href="#" id="celsius-link" class="active"> °C |</a>
+                <a href="#" id="fahrenheit-link" class="active"> °F</a></span
+              >
             </div>
-            <div class="col-4" id="descriptiveInfo">
+            <div class="col-5" id="descriptiveInfo">
               <ul class="list-group-horizontal list-group-flush">
                 <li class="list-group-item">
                   <span>Description: </span
@@ -91,7 +94,6 @@
               </ul>
             </div>
           </div>
-          <br />
         </section>
         <section class="forecast">
           <div class="row fcst-days">

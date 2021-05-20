@@ -77,16 +77,42 @@ body {
   cursor: pointer;
 }
 
+.square {
+  background-color: rgba(208, 208, 209, 0.534);
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 10%;
+  box-shadow: 4px 4px 8px rgb(212, 212, 212);
+  height: 90px;
+  width: 110px;
+  position: relative;
+  top: 45px;
+  left: 40px;
+}
+
 #weather-icon {
   width: 130px;
   position: relative;
-  top: 27px;
-  left: 20px;
+  left: 27px;
+  top: -68px;
 }
 
 #mainWeatherData {
   position: relative;
-  left: 60px;
+  left: 50px;
+}
+#mainWeatherData .active {
+  color: #42077a;
+  cursor: default;
+  text-decoration: none;
+  position: relative;
+  left: 210px;
+  top: -110px;
+}
+
+#mainWeatherData .active:hover {
+  color: #42077a;
+  cursor: default;
+  text-decoration: none;
 }
 
 #current-city {
@@ -103,6 +129,8 @@ body {
 
 #descriptiveInfo {
   font-size: 12px;
+  position: relative;
+  top: 30px;
 }
 
 .description,
@@ -114,8 +142,9 @@ body {
 
 .forecast {
   text-align: center;
-  margin-top: 10px;
   font-size: 14px;
+  position: relative;
+  top: -30px;
 }
 
 .fcst-days {
