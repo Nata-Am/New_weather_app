@@ -57,14 +57,14 @@ function showCurrentCityTemperature(response) {
     weatherWind.innerHTML = ` ${currentWind} km/h`;
 
     let weatherIcon = document.querySelector("#weather-icon");
-    weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+    weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
     weatherIcon.setAttribute("alt", response.data.weather[0].description)
 }
 
 function search(city) {
     let apiKey = "8c780c003118c891cdcc809594dbc9d4"
     let units = "metric"
-    let apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`
 
     axios.get(apiUrl).then(showCurrentCityTemperature)
 }
@@ -112,7 +112,7 @@ function showCurrentTemperature(response) {
     weatherWind.innerHTML = ` ${currentWind} km/h`;
 
     let weatherIcon = document.querySelector("#weather-icon");
-    weatherIcon.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+    weatherIcon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
     weatherIcon.setAttribute("alt", response.data.weather[0].description)
 }
 
