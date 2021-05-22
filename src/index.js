@@ -36,6 +36,29 @@ hour.innerHTML = formatedHour(today)
 
 
 
+function displayForecast() {
+    let forecastElement = document.querySelector("#forecast");
+    let forecastHTML = `<div class="row">`;
+    let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri"];
+    days.forEach(function (day) {
+        forecastHTML = forecastHTML + `
+        <div class="col-2">
+          <div class="forecastDay">${day}</div>
+          <div class="forecastLogo">🌧</div>
+          <div class="forecastTemperature">
+            <span class="max-temperature">18°</span>
+            <span class="min-temperature">10°</span>
+          </div>
+        </div> `;
+    });
+
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
+}
+
+
+displayForecast();
+
 function showCurrentCityTemperature(response) {
     celsiusTemperture = response.data.main.temp;
     let currentTemperature = Math.round(celsiusTemperture);

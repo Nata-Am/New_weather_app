@@ -140,7 +140,7 @@ body {
   color: rgb(126, 82, 248);
 }
 
-.forecast {
+#forecast {
   text-align: center;
   font-size: 14px;
   position: relative;
