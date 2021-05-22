@@ -147,16 +147,16 @@ body {
   top: -30px;
 }
 
-.fcst-days {
+.forecastDay {
   color: gray;
 }
 
-.fcst-logo {
+.forecastLogo {
   margin: 10px -12px 10px -12px;
-  font-size: larger;
+  font-size: x-large;
 }
 
-.fcst-temperature {
+.forecastTemperature {
   color: gray;
 }
 
