@@ -78,10 +78,9 @@ body {
 }
 
 .square {
-  background-color: rgba(208, 208, 209, 0.534);
-  border: 1px solid rgb(212, 212, 212);
-  border-radius: 10%;
-  box-shadow: 4px 4px 8px rgb(212, 212, 212);
+  background-color: rgba(232, 232, 235, 0.973);
+  border-radius: 30px;
+  box-shadow: 4px 4px 8px rgb(241, 240, 240);
   height: 90px;
   width: 110px;
   position: relative;
@@ -153,7 +152,7 @@ body {
 
 .forecastLogo {
   margin: 10px -12px 10px -12px;
-  font-size: x-large;
+  width: 50px;
 }
 
 .forecastTemperature {
