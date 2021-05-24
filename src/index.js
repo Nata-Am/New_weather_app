@@ -43,8 +43,6 @@ function forecastformatDay(timestamp) {
     return days[day];
 }
 
-
-
 function displayForecast(response) {
     let forecast = response.data.daily;
     let forecastElement = document.querySelector("#forecast");
@@ -67,9 +65,6 @@ function displayForecast(response) {
 
     console.log(response.data.daily)
 }
-
-
-
 
 function getForecast(coordinates) {
     let apiKey = "8c780c003118c891cdcc809594dbc9d4"
@@ -116,7 +111,6 @@ function search(city) {
     axios.get(apiUrl).then(showCurrentCityTemperature)
 }
 
-
 function handleSubmit(event) {
     event.preventDefault();
     let searchInput = document.querySelector("#city-name");
@@ -145,7 +139,7 @@ function showCurrentTemperature(response) {
     temperature.innerHTML = ` ${currentTemperature}`;
 
     let currentCity = document.querySelector("#current-city");
-    currentCity.innerHTML = `${response.data.name} 📍`;
+    currentCity.innerHTML = `${response.data.name}`;
 
     let weatherDescription = document.querySelector("#description")
     weatherDescription.innerHTML = response.data.weather[0].description;
@@ -182,25 +176,3 @@ function linkCurrentLocation() {
 
 let currentLocation = document.querySelector("#currentInfo");
 currentLocation.addEventListener("click", linkCurrentLocation)
-
-
-
-
-function displayFahrenheitTemperature(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
-    let fahrenheitTemperature = (celsiusTemperture * 9) / 5 + 32;
-    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature")
-    temperatureElement.innerHTML = Math.round(celsiusTemperture);
-}
-
-let celsiusTemperture = null
-let fahrenheitLink = document.querySelector("#fahrenheit-link")
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature)
-let celsiusLink = document.querySelector("#celsius-link")
-celsiusLink.addEventListener("click", displayCelsiusTemperature)
