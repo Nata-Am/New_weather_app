@@ -78,8 +78,9 @@ body {
 }
 
 .square {
-  background-color: rgba(232, 232, 235, 0.973);
-  border-radius: 30px;
+  background-color: rgb(31, 2, 58);
+  opacity: 0.2;
+  border-radius: 10px;
   box-shadow: 4px 4px 8px rgb(241, 240, 240);
   height: 90px;
   width: 110px;
